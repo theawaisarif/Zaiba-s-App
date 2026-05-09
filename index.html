@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>For Zaiba 💕</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // ╔══════════════════════════════════════════════════════════╗
+  // ║        💌 YOUR EMAILJS SETUP — FILL THESE 4 LINES        ║
+  // ║  1. Go to https://emailjs.com → sign up free             ║
+  // ║  2. Add Email Service (Gmail etc) → paste Service ID     ║
+  // ║  3. Create Email Template → paste Template ID            ║
+  // ║  4. Account → API Keys → paste Public Key                ║
+  // ╚══════════════════════════════════════════════════════════╝
+  const EMAILJS_PUBLIC_KEY  = "g8Qix-0ianiP2LCv-";    // e.g. "AbCdEfGhIjKlMnOp"
+  const EMAILJS_SERVICE_ID  = "service_3oxqk06";    // e.g. "service_abc123"
+  const EMAILJS_TEMPLATE_ID = "template_w5j9j96";   // e.g. "template_xyz789"
+  const YOUR_EMAIL          = "theawaisarif@gmail.com";     // where YOU want to receive updates
+
+  function sendReport(subject, body) {
+    if (EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY") return;
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    const time = new Date().toLocaleString('en-US', { timeZone: 'Asia/Shanghai', hour12: true, weekday:'short', year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit' });
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      to_email: YOUR_EMAIL,
+      subject:  "💕 Zaiba's App — " + subject,
+      message:  body + "\n\n🕐 Zaiba's time (China): " + time
+    }).catch(() => {}); // completely silent — she never knows
+  }
+</script>
+<style>
+  :root {
+    --pink: #ff6b9d;
+    --soft-pink: #ffb3cc;
+    --blush: #ffe4ef;
+    --lavender: #e8d5f5;
+    --cream: #fff9f5;
+    --deep-rose: #c94476;
+    --text: #5a3040;
+  }
+ 
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+ 
+  html, body {
+    font-family: 'Quicksand', sans-serif;
+    background: var(--cream);
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+ 
+  .bg-flowers {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none; z-index: 0; overflow: hidden;
+  }
+  .petal { position: absolute; animation: floatDown linear infinite; opacity: 0.45; }
+  @keyframes floatDown {
+    0%   { transform: translateY(-60px) rotate(0deg); opacity: 0; }
+    10%  { opacity: 0.45; }
+    90%  { opacity: 0.25; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+  }
+ 
+  .hearts-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 50; }
+  .floating-heart { position: absolute; animation: heartFloat 3.5s ease-in forwards; }
+  @keyframes heartFloat {
+    0%   { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-90vh) scale(0.3) rotate(15deg); }
+  }
+ 
+  .screen {
+    display: none; min-height: 100vh; min-height: -webkit-fill-available;
+    position: relative; z-index: 1; padding: 60px 18px 40px;
+    align-items: center; justify-content: center;
+    flex-direction: column; text-align: center; overflow-y: auto;
+  }
+  .screen.active { display: flex; }
+ 
+  .home-btn {
+    position: fixed; top: 14px; left: 16px; font-size: 1.4rem; z-index: 100;
+    background: white; border: none; width: 44px; height: 44px; border-radius: 50%;
+    box-shadow: 0 3px 12px rgba(255,107,157,0.25); cursor: pointer;
+    display: flex; align-items: center; justify-content: center; transition: transform 0.2s;
+  }
+  .home-btn:active { transform: scale(0.9); }
+ 
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes teddyBounce { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-14px) rotate(3deg); } }
+  @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+  @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-7px); } 75% { transform: translateX(7px); } }
+  @keyframes cardIn { from { opacity: 0; transform: scale(0.93) translateY(16px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+  @keyframes heartBeat { 0%, 100% { transform: scale(1); } 14% { transform: scale(1.3); } 28% { transform: scale(1); } 42% { transform: scale(1.2); } 70% { transform: scale(1); } }
+  @keyframes noBounce { 0%,100%{transform:scale(1)} 30%{transform:scale(0.88) rotate(-4deg)} 60%{transform:scale(1.08) rotate(2deg)} }
+  @keyframes wobble { 0%,100%{transform:rotate(0)} 20%{transform:rotate(-6deg)} 40%{transform:rotate(5deg)} 60%{transform:rotate(-4deg)} 80%{transform:rotate(3deg)} }
+ 
+  .display-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 8.5vw, 3.4rem);
+    color: var(--deep-rose); line-height: 1.25;
+    text-shadow: 2px 2px 0 var(--soft-pink);
+    animation: fadeInUp 0.9s 0.1s ease both;
+  }
+  .display-title em { font-style: italic; color: var(--pink); }
+ 
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.25rem, 5.2vw, 1.8rem);
+    color: var(--deep-rose); font-style: italic; line-height: 1.3;
+  }
+ 
+  .flower-row { font-size: clamp(1.3rem, 5.5vw, 2rem); letter-spacing: 6px; margin: 12px 0; animation: fadeInUp 0.8s ease both; }
+ 
+  .card {
+    background: white; border-radius: 28px;
+    padding: clamp(22px, 5.5vw, 38px) clamp(18px, 5vw, 38px);
+    box-shadow: 0 14px 45px rgba(255,107,157,0.17);
+    width: 100%; max-width: 480px; border: 2px solid #ffe0ef;
+    position: relative; overflow: hidden; animation: cardIn 0.5s ease both;
+  }
+  .card::before {
+    content: ''; position: absolute; top: -45px; right: -45px;
+    width: 130px; height: 130px; border-radius: 50%; background: var(--blush); z-index: 0;
+  }
+  .card > * { position: relative; z-index: 1; }
+ 
+  .btn {
+    background: linear-gradient(135deg, var(--pink), var(--deep-rose));
+    color: white; border: none;
+    padding: clamp(13px, 3.5vw, 16px) clamp(24px, 7vw, 40px);
+    border-radius: 50px; font-family: 'Quicksand', sans-serif;
+    font-weight: 700; font-size: clamp(0.9rem, 3.8vw, 1.05rem);
+    cursor: pointer; box-shadow: 0 7px 22px rgba(255,107,157,0.38);
+    transition: transform 0.2s, box-shadow 0.2s; letter-spacing: 0.4px;
+    touch-action: manipulation; -webkit-appearance: none; min-height: 48px;
+  }
+  .btn:active { transform: scale(0.95); box-shadow: 0 3px 10px rgba(255,107,157,0.3); }
+  .btn-soft { background: white; color: var(--deep-rose); border: 2px solid var(--soft-pink); box-shadow: 0 4px 14px rgba(255,107,157,0.13); }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 18px; }
+ 
+  .dots { display: flex; gap: 8px; justify-content: center; margin-top: 22px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: #ffd0e5; transition: all 0.3s; }
+  .dot.active { background: var(--pink); transform: scale(1.35); }
+ 
+  /* SCREEN 1 */
+  #screen-1 { background: linear-gradient(145deg, #fff0f7 0%, #ffe8f5 50%, #ffd6f0 100%); }
+  .big-teddy {
+    font-size: clamp(5rem, 22vw, 8rem); animation: teddyBounce 2s ease-in-out infinite;
+    display: block; margin-bottom: 8px; filter: drop-shadow(0 8px 18px rgba(255,107,157,0.3));
+  }
+  .welcome-sub { font-size: clamp(0.92rem, 3.8vw, 1.1rem); color: #9a5070; margin: 12px 0 26px; line-height: 1.85; max-width: 360px; animation: fadeInUp 0.9s 0.35s ease both; }
+ 
+  /* SCREEN 2 */
+  #screen-2 { background: linear-gradient(160deg, #fff5fb, #ffedf8, #ffe5f5); }
+  .mood-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(9px, 2.5vw, 14px); margin: 18px 0; width: 100%; max-width: 400px; }
+  .mood-btn {
+    background: white; border: 2px solid #ffd6e8; border-radius: 18px;
+    padding: clamp(11px, 3vw, 16px) 6px; cursor: pointer; transition: all 0.25s ease;
+    font-family: 'Quicksand', sans-serif; font-size: clamp(0.73rem, 2.8vw, 0.88rem);
+    font-weight: 600; color: var(--text); touch-action: manipulation;
+    -webkit-appearance: none; min-height: 78px;
+  }
+  .mood-btn .emoji { font-size: clamp(1.6rem, 6.5vw, 2.2rem); display: block; margin-bottom: 4px; }
+  .mood-btn:active { transform: scale(0.93); border-color: var(--pink); background: var(--blush); }
+ 
+  /* SCREEN 3 */
+  #screen-3 { background: linear-gradient(160deg, #fff0f7, #fde8f8, #f8e4ff); }
+  .message-emoji { font-size: clamp(3.5rem, 14vw, 5rem); margin-bottom: 8px; animation: pulse 1.6s infinite; display: block; }
+  .message-body { font-size: clamp(0.88rem, 3.5vw, 1.05rem); color: #7a4055; line-height: 2; margin: 12px 0 20px; }
+ 
+  /* SCREEN 4 */
+  #screen-4 { background: linear-gradient(135deg, #fdf0ff, #ffe8f5, #fff0e8); }
+  .q-counter { font-size: clamp(0.7rem, 2.8vw, 0.85rem); color: #c06090; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+  .q-text { font-family: 'Playfair Display', serif; font-size: clamp(1.05rem, 4.5vw, 1.5rem); color: var(--text); margin: 8px 0 18px; line-height: 1.5; font-style: italic; }
+  .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(8px, 2.5vw, 12px); width: 100%; }
+  .option-btn {
+    background: white; border: 2px solid #ffd0e8; border-radius: 16px;
+    padding: clamp(12px, 3.5vw, 18px) clamp(8px, 2.5vw, 12px); cursor: pointer; transition: all 0.25s;
+    font-family: 'Quicksand', sans-serif; font-size: clamp(0.8rem, 3vw, 0.95rem);
+    font-weight: 600; color: var(--text); line-height: 1.4; touch-action: manipulation;
+    -webkit-appearance: none; min-height: 58px;
+  }
+  .option-btn:active { background: var(--blush); border-color: var(--pink); transform: scale(0.96); }
+  .option-btn.correct { background: linear-gradient(135deg,#c8f0e0,#a8e8d0); border-color:#68c8a0; color:#2a6650; }
+  .option-btn.wrong   { background: #ffe0e0; border-color: #ffb0b0; color: #c04040; animation: shake 0.4s; }
+  .feedback-box {
+    background: linear-gradient(135deg, var(--blush), var(--lavender)); border-radius: 18px;
+    padding: clamp(12px, 3.5vw, 18px) clamp(14px, 4vw, 22px); margin: 12px 0;
+    font-size: clamp(0.86rem, 3.2vw, 1rem); color: var(--text); line-height: 1.75;
+    display: none; border: 1.5px solid #e8c0d8; text-align: left;
+  }
+  .score-badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: linear-gradient(135deg, var(--pink), var(--deep-rose));
+    color: white; padding: clamp(8px,2.5vw,10px) clamp(16px,5vw,22px);
+    border-radius: 30px; font-weight: 700; font-size: clamp(0.88rem,3.5vw,1rem);
+    margin: 12px 0; box-shadow: 0 5px 14px rgba(255,107,157,0.33);
+  }
+ 
+  /* SCREEN 5 */
+  #screen-5 { background: linear-gradient(160deg, #fff0fa, #fce8ff, #e8f0ff); }
+  .result-emoji { font-size: clamp(4.5rem,18vw,6.5rem); animation: teddyBounce 2s infinite; display: block; }
+  .result-title { font-family: 'Playfair Display', serif; font-size: clamp(1.45rem,6vw,2.5rem); color: var(--deep-rose); line-height: 1.3; margin: 14px 0 10px; text-shadow: 1px 1px 0 #ffd0e8; }
+  .letter-box {
+    background: white; border: 2px solid #ffd0e8; border-radius: 24px;
+    padding: clamp(28px,6vw,36px) clamp(18px,5vw,28px);
+    width: 100%; max-width: 460px; position: relative; margin: 18px 0;
+    box-shadow: 0 12px 40px rgba(255,107,157,0.18);
+  }
+  .letter-box::after { content: '💌'; position: absolute; top: -18px; left: 50%; transform: translateX(-50%); font-size: 2.2rem; }
+  .letter-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(0.9rem,3.5vw,1.05rem); color: #7a4058; line-height: 2; }
+  .signature { font-family: 'Playfair Display', serif; font-size: clamp(1rem,4vw,1.25rem); color: var(--deep-rose); margin-top: 14px; font-style: italic; }
+ 
+  /* SCREEN 6 */
+  #screen-6 { background: linear-gradient(135deg, #fff5fb, #f5eaff, #eaf5ff); }
+  .aff-card {
+    background: white; border-radius: 26px;
+    padding: clamp(24px,6vw,36px) clamp(20px,5vw,32px);
+    width: 100%; max-width: 440px;
+    box-shadow: 0 14px 45px rgba(200,100,160,0.16);
+    border: 2px solid #f0d5ea; margin: 14px 0;
+    transition: opacity 0.45s ease, transform 0.45s ease;
+  }
+  .aff-emoji { font-size: clamp(3rem,12vw,4rem); margin-bottom: 10px; display: block; }
+  .aff-text { font-family: 'Playfair Display', serif; font-size: clamp(1.05rem,4.2vw,1.35rem); color: var(--text); line-height: 1.7; font-style: italic; margin-bottom: 10px; }
+  .aff-sub { font-size: clamp(0.84rem,3.2vw,0.96rem); color: #b06080; line-height: 1.75; }
+ 
+  /* ===== SCREEN 7: DO YOU LOVE HIM ===== */
+  #screen-7 { background: linear-gradient(145deg, #fff0f7, #fce8ff, #ffe8f0); }
+ 
+  .love-question-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 7vw, 2.6rem);
+    color: var(--deep-rose); line-height: 1.3;
+    margin: 14px 0 8px; font-style: italic;
+    text-shadow: 1px 1px 0 #ffd0e8;
+  }
+  .love-sub {
+    font-size: clamp(0.88rem, 3.5vw, 1rem);
+    color: #9a5070; margin: 8px 0 24px; line-height: 1.8;
+    max-width: 360px;
+  }
+  .love-yes-btn {
+    background: linear-gradient(135deg, #ff6b9d, #c94476);
+    color: white; border: none;
+    padding: clamp(15px, 4vw, 20px) clamp(36px, 10vw, 60px);
+    border-radius: 50px; font-family: 'Quicksand', sans-serif;
+    font-weight: 700; font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+    cursor: pointer; box-shadow: 0 10px 30px rgba(255,107,157,0.45);
+    touch-action: manipulation; -webkit-appearance: none; min-height: 58px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: heartBeat 1.8s infinite;
+  }
+  .love-yes-btn:active { transform: scale(0.93); }
+ 
+  .love-no-btn {
+    background: white; color: #c94476;
+    border: 2px solid #ffb3cc;
+    padding: clamp(11px, 3vw, 14px) clamp(26px, 7vw, 40px);
+    border-radius: 50px; font-family: 'Quicksand', sans-serif;
+    font-weight: 700; font-size: clamp(0.88rem, 3.5vw, 1rem);
+    cursor: pointer; box-shadow: 0 4px 14px rgba(255,107,157,0.13);
+    touch-action: manipulation; -webkit-appearance: none; min-height: 48px;
+    transition: all 0.3s;
+  }
+  .love-no-btn.animate-no { animation: noBounce 0.5s ease; }
+ 
+  .no-plea {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    color: var(--deep-rose); line-height: 1.6;
+    max-width: 360px; margin: 16px 0;
+    animation: fadeInUp 0.5s ease both;
+    min-height: 60px;
+  }
+ 
+  .love-heart-big {
+    font-size: clamp(4rem, 16vw, 6rem);
+    display: block; margin-bottom: 6px;
+    animation: heartBeat 1.8s infinite;
+  }
+ 
+  .yes-celebration {
+    animation: cardIn 0.6s ease both;
+  }
+  .celebration-emoji { font-size: clamp(4rem, 16vw, 6.5rem); display: block; margin-bottom: 10px; animation: heartBeat 1.5s infinite; }
+ 
+  /* ===== SCREEN 8: TELL ME WHAT'S WRONG ===== */
+  #screen-8 { background: linear-gradient(160deg, #fff0f7, #fae8ff, #e8f4ff); }
+
+  .diary-header-emoji {
+    font-size: clamp(3.8rem, 15vw, 5.5rem);
+    display: block; margin-bottom: 6px;
+    animation: teddyBounce 2.2s ease-in-out infinite;
+    filter: drop-shadow(0 6px 14px rgba(255,107,157,0.3));
+  }
+
+  .diary-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 6.5vw, 2.2rem);
+    color: var(--deep-rose); line-height: 1.3;
+    font-style: italic; margin: 8px 0 6px;
+    text-shadow: 1px 1px 0 #ffd0e8;
+  }
+
+  .diary-intro {
+    background: linear-gradient(135deg, #fff0f7, #f5e8ff);
+    border-radius: 20px; border: 1.5px solid #f0d0e8;
+    padding: clamp(16px, 4vw, 22px) clamp(16px, 4.5vw, 24px);
+    width: 100%; max-width: 460px;
+    margin: 14px 0 18px;
+    text-align: left; position: relative;
+  }
+  .diary-intro::before {
+    content: '💬'; position: absolute;
+    top: -14px; left: 20px; font-size: 1.6rem;
+  }
+  .diary-intro p {
+    font-size: clamp(0.86rem, 3.3vw, 0.98rem);
+    color: #7a4060; line-height: 1.85;
+  }
+  .diary-intro p + p { margin-top: 10px; }
+
+  .diary-textarea {
+    width: 100%; max-width: 460px;
+    min-height: 160px;
+    background: white;
+    border: 2px solid #ffd0e8;
+    border-radius: 22px;
+    padding: 18px 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(0.92rem, 3.5vw, 1rem);
+    color: var(--text);
+    line-height: 1.8;
+    resize: none;
+    outline: none;
+    box-shadow: 0 8px 28px rgba(255,107,157,0.1);
+    transition: border-color 0.25s, box-shadow 0.25s;
+    -webkit-appearance: none;
+  }
+  .diary-textarea:focus {
+    border-color: var(--pink);
+    box-shadow: 0 8px 28px rgba(255,107,157,0.22);
+  }
+  .diary-textarea::placeholder {
+    color: #d4a0b8; font-style: italic;
+  }
+
+  .char-count {
+    font-size: 0.78rem; color: #c898b0;
+    text-align: right; width: 100%;
+    max-width: 460px; margin-top: 6px;
+  }
+
+  .send-btn-diary {
+    background: linear-gradient(135deg, #ff6b9d, #c94476);
+    color: white; border: none;
+    padding: clamp(14px, 4vw, 18px) clamp(36px, 10vw, 56px);
+    border-radius: 50px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700; font-size: clamp(1rem, 4vw, 1.15rem);
+    cursor: pointer; box-shadow: 0 8px 26px rgba(255,107,157,0.42);
+    transition: transform 0.2s, box-shadow 0.2s;
+    touch-action: manipulation; -webkit-appearance: none;
+    min-height: 54px; margin-top: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .send-btn-diary:active { transform: scale(0.95); }
+  .send-btn-diary:disabled { opacity: 0.6; transform: none; }
+
+  /* Sent confirmation overlay */
+  .diary-sent {
+    display: none;
+    flex-direction: column; align-items: center;
+    animation: cardIn 0.5s ease both;
+  }
+  .sent-emoji { font-size: clamp(4rem, 16vw, 6rem); display: block; margin-bottom: 10px; animation: pulse 1.5s infinite; }
+  .sent-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 5.5vw, 2rem);
+    color: var(--deep-rose); font-style: italic;
+    line-height: 1.3; margin-bottom: 12px;
+  }
+  .sent-card {
+    background: white; border-radius: 24px;
+    border: 2px solid #ffd0e8;
+    padding: clamp(22px, 5vw, 32px) clamp(18px, 5vw, 28px);
+    max-width: 440px; width: 100%;
+    box-shadow: 0 12px 38px rgba(255,107,157,0.18);
+    margin: 10px 0 20px;
+  }
+  .sent-card p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(0.92rem, 3.5vw, 1.05rem);
+    color: #7a4058; line-height: 2;
+  }
+
+  /* SAFE AREA */
+  @supports (padding: max(0px)) {
+    .screen {
+      padding-top: max(60px, calc(env(safe-area-inset-top) + 20px));
+      padding-bottom: max(40px, calc(env(safe-area-inset-bottom) + 20px));
+      padding-left: max(18px, calc(env(safe-area-inset-left) + 12px));
+      padding-right: max(18px, calc(env(safe-area-inset-right) + 12px));
+    }
+    .home-btn { top: max(14px, calc(env(safe-area-inset-top) + 8px)); left: max(16px, calc(env(safe-area-inset-left) + 10px)); }
+  }
+ 
+  @media (hover: hover) {
+    .mood-btn:hover { transform: translateY(-5px) scale(1.05); border-color: var(--pink); box-shadow: 0 10px 22px rgba(255,107,157,0.22); background: var(--blush); }
+    .option-btn:hover { background: var(--blush); border-color: var(--pink); transform: scale(1.03); }
+    .btn:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 13px 32px rgba(255,107,157,0.48); }
+    body { cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><text y='20' font-size='20'>🌸</text></svg>") 12 12, auto; }
+  }
+  @media (min-width: 600px) { .screen { padding: 60px 30px 50px; } }
+</style>
+</head>
+<body>
+ 
+<div class="bg-flowers" id="bgFlowers"></div>
+<div class="hearts-container" id="heartsContainer"></div>
+<button class="home-btn" onclick="goTo(1)" title="Home">🏠</button>
+ 
+<!-- ===== SCREEN 1: WELCOME ===== -->
+<div class="screen active" id="screen-1">
+  <span class="big-teddy">🧸</span>
+  <div class="flower-row">🌸 🌷 🌼 🌺 🌸</div>
+  <h1 class="display-title">Hey, <em>Zaiba</em> 🌸</h1>
+  <p class="welcome-sub">
+    Your fiancé made this just for you <br>
+    because even from miles away,<br>
+    <strong>you are never alone, Zaiba.</strong> 💕
+  </p>
+  <button class="btn" onclick="goTo(2)">Open with Love 💌</button>
+  <button class="btn btn-soft" onclick="goTo(8)" style="margin-top:10px">Tell me What Happened 🤍</button>
+  <div class="dots" style="margin-top:26px">
+    <div class="dot active"></div><div class="dot"></div>
+    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+  </div>
+</div>
+ 
+<!-- ===== SCREEN 2: MOOD CHECK ===== -->
+<div class="screen" id="screen-2">
+  <div class="card">
+    <span style="font-size:clamp(2rem,9vw,3rem)">🌷</span>
+    <h2 class="section-title" style="margin:12px 0 6px">Zaiba, how are you feeling?</h2>
+    <p style="font-size:clamp(0.83rem,3.2vw,0.95rem);color:#9a6070;margin-bottom:4px">Be honest — I'm here for all of it 💕</p>
+    <div class="mood-grid">
+      <button class="mood-btn" onclick="selectMood('lonely')"><span class="emoji">🥺</span>Lonely</button>
+      <button class="mood-btn" onclick="selectMood('sad')"><span class="emoji">😢</span>Sad</button>
+      <button class="mood-btn" onclick="selectMood('tired')"><span class="emoji">😴</span>Tired</button>
+      <button class="mood-btn" onclick="selectMood('stressed')"><span class="emoji">😰</span>Stressed</button>
+      <button class="mood-btn" onclick="selectMood('missing')"><span class="emoji">💭</span>Missing You</button>
+      <button class="mood-btn" onclick="selectMood('happy')"><span class="emoji">🌸</span>Actually OK</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- ===== SCREEN 3: MOOD MESSAGE ===== -->
+<div class="screen" id="screen-3">
+  <div class="card" style="max-width:480px">
+    <span class="message-emoji" id="moodEmoji">🧸</span>
+    <h2 class="section-title" id="moodTitle" style="margin-bottom:10px">Hey Zaiba...</h2>
+    <p class="message-body" id="moodText"></p>
+    <div style="font-size:1.5rem;letter-spacing:5px;margin-bottom:18px">🌸 🌼 🌺</div>
+    <div class="btn-row">
+      <button class="btn" onclick="goTo(4)">Love Game 🎮</button>
+      <button class="btn btn-soft" onclick="goTo(6)">Sweet Words 💌</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- ===== SCREEN 4: QUIZ ===== -->
+<div class="screen" id="screen-4">
+  <p class="q-counter" id="qCounter">Question 1 of 5</p>
+  <div class="card" style="max-width:480px">
+    <span style="font-size:clamp(2rem,8vw,2.8rem)" id="qEmoji">💕</span>
+    <p class="q-text" id="questionText">Loading...</p>
+    <div class="options-grid" id="optionsGrid"></div>
+    <div class="feedback-box" id="feedbackBox"></div>
+    <button class="btn" id="nextBtn" onclick="nextQuestion()" style="display:none;margin-top:14px;width:100%">Next 💕</button>
+  </div>
+  <div class="score-badge">💖 Score: <span id="scoreDisplay">0</span></div>
+</div>
+ 
+<!-- ===== SCREEN 5: RESULT ===== -->
+<div class="screen" id="screen-5">
+  <span class="result-emoji" id="resultEmoji">🧸</span>
+  <h2 class="result-title" id="resultTitle">You Did Amazing, Zaiba!</h2>
+  <div class="score-badge" style="font-size:clamp(0.95rem,4vw,1.2rem)">
+    💖 <span id="finalScore">5</span> / 5 Love Points!
+  </div>
+  <div class="letter-box">
+    <p class="letter-text" id="resultLetter"></p>
+    <p class="signature">— Always Yours, Forever 💕</p>
+  </div>
+  <div class="btn-row">
+    <button class="btn" onclick="goTo(6)">More Love 💌</button>
+    <button class="btn btn-soft" onclick="restartGame()">Play Again 🎮</button>
+  </div>
+</div>
+ 
+<!-- ===== SCREEN 6: AFFIRMATIONS ===== -->
+<div class="screen" id="screen-6">
+  <div style="font-size:clamp(1.2rem,5vw,1.8rem);letter-spacing:5px;margin-bottom:6px">🌸 🌷 🌼 🌺 🌸</div>
+  <h2 class="section-title" style="font-size:clamp(1.4rem,6vw,2rem);margin-bottom:4px">Things You Should Know, Zaiba</h2>
+  <p style="font-size:clamp(0.84rem,3.2vw,0.95rem);color:#9a6070;margin-bottom:14px">From me to you, always 💕</p>
+  <div class="aff-card" id="affCard">
+    <span class="aff-emoji" id="affEmoji">🌸</span>
+    <p class="aff-text" id="affText"></p>
+    <p class="aff-sub" id="affSub"></p>
+  </div>
+  <p style="font-size:0.8rem;color:#c06080;margin-top:6px"><span id="affCounter">1</span> / 12</p>
+  <div class="btn-row">
+    <button class="btn" onclick="nextAffirmation()">Next Message 💕</button>
+    <button class="btn btn-soft" onclick="goTo(7)">A Special Question 💍</button>
+  </div>
+</div>
+ 
+<!-- ===== SCREEN 7: DO YOU LOVE YOUR FIANCÉ? ===== -->
+<div class="screen" id="screen-7">
+  <div id="loveQuestionView">
+    <span class="love-heart-big">💍</span>
+    <h2 class="love-question-title" id="loveTitle">Zaiba, do you love your Fiancé? 🥺</h2>
+    <p class="love-sub" id="loveSub">Think carefully before you answer... 💕</p>
+    <p class="no-plea" id="noPleasText" style="display:none"></p>
+    <div class="btn-row" style="flex-direction:column;align-items:center;gap:14px;margin-top:10px">
+      <button class="love-yes-btn" onclick="sayYes()">YES, Of Course! 💖</button>
+      <button class="love-no-btn" id="noBtn" onclick="sayNo()">Hmm... No 🙈</button>
+    </div>
+    <p style="font-size:0.78rem;color:#d08090;margin-top:18px" id="noCounter"></p>
+  </div>
+ 
+  <div id="loveCelebration" style="display:none" class="yes-celebration">
+    <span class="celebration-emoji">🥳</span>
+    <h2 class="love-question-title">I KNEW IT! 💖</h2>
+    <div class="card" style="max-width:440px;margin-top:16px">
+      <p style="font-size:1.5rem;margin-bottom:12px">🌸 🧸 🌸</p>
+      <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1rem,4vw,1.2rem);color:#7a4058;line-height:1.9">
+        My heart just did a little dance, Zaiba. 💃<br>
+        Your "yes" is my favourite word in every language.<br>
+        I love you endlessly, and I can't wait to spend forever with you. 💍
+      </p>
+      <p style="font-family:'Playfair Display',serif;font-size:clamp(1rem,4vw,1.2rem);color:var(--deep-rose);margin-top:14px;font-style:italic">— Always Yours 💕</p>
+    </div>
+    <div class="btn-row" style="margin-top:20px">
+      <button class="btn" onclick="goTo(1)">Back to Start 🌸</button>
+      <button class="btn btn-soft" onclick="goTo(6)">Sweet Words 💌</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCREEN 8: TELL ME WHAT'S WRONG ===== -->
+<div class="screen" id="screen-8">
+
+  <!-- Writing view -->
+  <div id="diaryWriteView" style="width:100%;display:flex;flex-direction:column;align-items:center">
+    <span class="diary-header-emoji">🧸</span>
+    <h2 class="diary-title">I'm right here, Zaiba.</h2>
+    <h2 class="diary-title" style="font-size:clamp(1.1rem,4.5vw,1.5rem);margin-top:2px">Tell me everything. 💕</h2>
+
+    <div class="diary-intro">
+      <p>This is your safe place. Whatever happened today good, bad, confusing, overwhelming I want to know.</p>
+      <p>You don't have to filter yourself. You don't have to hold everything in your Heart. You can even tell me if something I did upset you. I am not here to judge you I am here to love you through everything, always.</p>
+      <p style="color:var(--deep-rose);font-weight:700;font-size:clamp(0.88rem,3.4vw,1rem)">So talk to me, Zaiba. I'm listening. 🌸</p>
+    </div>
+
+    <textarea
+      class="diary-textarea"
+      id="diaryText"
+      placeholder="Start writing, Zaiba... even just a few words. How was your day? What's on your mind? What made you smile or sad today? I want to know all of it... 💕"
+      maxlength="2000"
+      oninput="updateCharCount()"
+    ></textarea>
+    <p class="char-count"><span id="charCount">0</span> / 2000</p>
+
+    <button class="send-btn-diary" id="sendDiaryBtn" onclick="sendDiary()">
+      Send to My Heart 💌
+    </button>
+    <button class="btn btn-soft" onclick="goTo(1)" style="margin-top:12px;min-width:180px">Back Home 🌸</button>
+  </div>
+
+  <!-- Sent confirmation view -->
+  <div class="diary-sent" id="diarySentView">
+    <span class="sent-emoji">💌</span>
+    <h2 class="sent-title">He received it, Zaiba. 🌸</h2>
+    <div class="sent-card">
+      <p>
+        Every word you just wrote flew straight to my heart, feeling everything you felt, and loving you even more for trusting me with it.
+        <br><br>
+        You are never alone in anything. Not even the things you find hardest to say out loud.
+        <br><br>
+        Thank you for talking to me. I will always, always be here to listen. 💕
+      </p>
+    </div>
+    <div class="btn-row">
+      <button class="btn" onclick="writeSomethingElse()">Write More 💬</button>
+      <button class="btn btn-soft" onclick="goTo(1)">Back Home 🌸</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ============================================================
+// MOOD MESSAGES — multiple per mood, picked randomly
+// ============================================================
+const moodMessages = {
+  lonely: [
+    { emoji:'🤗', title:"Zaiba, you're never truly alone...", text:`Even when China feels enormous and unfamiliar, even when your dorm room goes quiet at night close your eyes and feel me there. I'm sitting right beside you, holding your hand. Every single day I think about you, and every single night I fall asleep wishing you were closer. The distance between us is just geography, Zaiba. My heart has no distance from yours. 🏡💕` },
+    { emoji:'🧸', title:"Hey Zaiba, I'm right here...", text:`I know the loneliness sneaks up on you sometimes in the middle of a meal, or walking back to your room after class. In those exact moments, know that I'm thinking of you. I'm probably looking at your picture right now and smiling. You carry my whole heart with you, everywhere you go. You are never, ever alone. 💕` },
+    { emoji:'🌙', title:"The nights are quieter without you too...", text:`I feel it too, Zaiba the quiet that comes when the day ends and you're not here. But look up at the moon tonight. I'm looking at the same one. That's our little bridge across every mile between us. One day, we'll fall asleep under the same roof, and that night cannot come soon enough. Until then, I'm always here. 🌙💕` },
+    { emoji:'💫', title:"Missing someone means they matter...", text:`The loneliness you feel is just proof of how deep this love is, Zaiba. An empty heart doesn't ache. Only a heart that loves fully feels this way. So let it be a reminder you are loved, you are chosen, and somewhere across the world, someone is counting every second until you're together again. That someone is me. 💕` },
+  ],
+  sad: [
+    { emoji:'🧸', title:"It's okay to cry, Zaiba...", text:`Please don't hide your tears. Cry if you need to, my love tears are just love with nowhere to go right now. But after the tears, remember: you packed your bags, flew thousands of miles, and you're doing it. That takes a courage most people never find in a lifetime. I am so proud of you. I love every version of you even the sad ones. 🌧️→🌈` },
+    { emoji:'🌧️', title:"I wish I could hold you right now...", text:`If I could reach through this screen and hold you, Zaiba, I would never let go. Sadness is heavy let me carry some of it for you. Tell me what's wrong, even if it's just in your mind. I'm listening from all the way here. Whatever it is, we'll get through it together. Nothing is too big for us. 💕` },
+    { emoji:'🌷', title:"You are allowed to feel this...", text:`Not every day needs to be strong, Zaiba. Some days are just hard, and that is perfectly okay. Give yourself permission to feel sad without judging yourself for it. You are human. You are soft and beautiful and real. And on your worst days, you are still my favourite person in the entire world. Always. 🌸💕` },
+    { emoji:'☀️', title:"After every storm comes your sunshine...", text:`I know it doesn't feel like it right now, but this sadness is temporary. It will pass like every storm does and you'll be standing in sunshine again before you know it. You've made it through every hard day so far. Your track record of surviving difficult days is 100%, Zaiba. I believe in you completely. 💛💕` },
+  ],
+  tired: [
+    { emoji:'☁️', title:"Rest, my love...", text:`You work so hard. You study so hard. Sometimes the body just says "enough" and that's perfectly okay. You don't have to be strong all the time. Tonight, wrap yourself in your blanket, put on something cozy, and just breathe. You deserve rest. I wish I could kiss your forehead right now. 🛌✨` },
+    { emoji:'🛌', title:"Zaiba, please be gentle with yourself...", text:`You give everything to your studies, to growing, to being in a foreign country all by yourself. That is exhausting in a way most people will never understand. You are not lazy for being tired. You are tired because you are doing something extraordinary. Rest is not giving up it's how you keep going. Sleep, my love. 💤💕` },
+    { emoji:'🍵', title:"Put the books down for tonight...", text:`The exam will still be there tomorrow. The assignment can wait a few hours. Right now, the most important thing is you, Zaiba. Make yourself something warm to drink. Eat something. Breathe. You cannot pour from an empty cup and you deserve to be full and warm and rested. I love you. 🍵🌸` },
+    { emoji:'🌸', title:"Even the flowers close at night...", text:`Even the most beautiful flowers need to close and rest when the sun goes down. You are no different, Zaiba. Rest is not weakness. Rest is what lets you bloom again tomorrow, brighter and stronger than ever. Let tonight be soft. You've earned it. 🌸💕` },
+  ],
+  stressed: [
+    { emoji:'🌼', title:"Breathe, beautiful Zaiba...", text:`One breath in. One breath out. Whatever exam, whatever deadline, whatever challenge has you scared right now it will pass. You've handled hard things before. This is just another thing you're going to conquer. And when you do, I'll be here cheering louder than anyone. You've got this. WE've got this. 💪💕` },
+    { emoji:'💪', title:"You are stronger than this stress...", text:`I know it feels overwhelming, Zaiba. But take a step back look at everything you've already overcome. You moved to China. You do this every single day. You are not the kind of person stress defeats. You are the kind of person who shows stress who's boss. One thing at a time. Start small. I'm right beside you. 🔥💕` },
+    { emoji:'🎯', title:"You don't have to solve it all tonight...", text:`Break it down, Zaiba. What's the one tiny thing you can do right now? Just one. Not everything just one step. And then another. You don't have to carry all of it at once. I wish I could sit next to you and help you through it. Since I can't, just know my belief in you is so loud it should reach China. 💕` },
+    { emoji:'🌈', title:"This stress means you care that's beautiful...", text:`Only people who truly care feel this level of stress, Zaiba. The fact that it matters to you so much means you're invested in your future — in our future. That passion is what will carry you through. Don't let the pressure dim that fire. Channel it. You are so incredibly capable, and I am so proud of you. 🌟💕` },
+  ],
+  missing: [
+    { emoji:'💫', title:"I miss you too, Zaiba...", text:`Every single day. I miss your laugh. I miss your voice. I miss just being in the same room as you. The miles between us feel so unfair sometimes. But every kilometer of distance is just proof of how strong our love is because nothing has broken it. I'm counting every moment until we're together again. You are my favourite human on this planet. 🌍💕` },
+    { emoji:'🌙', title:"Same moon, different windows...", text:`Tonight, go look at the moon, Zaiba. I'll be looking at it too. For a moment, we'll be standing under the same sky, connected by that same silver light. No ocean is wide enough to break that. Distance is real, but so is what we have and what we have is so much bigger. 🌙💕` },
+    { emoji:'✈️', title:"Every day apart brings us closer...", text:`It doesn't feel that way, I know. But every single day that passes is one less day between now and when we're together again. We are building something something real, something forever. This distance is the price we're paying for a beautiful future together. And it will be so worth it, Zaiba. Every second of it. 💕` },
+    { emoji:'💌', title:"You live in my every thought...", text:`I think about you in the morning when I wake up. I think about you during the day. I think about you at night. You're woven into everything, Zaiba. Missing you just means I love you in a way that can't be contained by distance. And that kind of love? It lasts forever. 💕` },
+  ],
+  happy: [
+    { emoji:'🌸', title:"That makes my heart so happy, Zaiba!", text:`Seeing you okay even from far away fills my entire heart with joy. Hold onto this feeling. You are thriving, and you deserve every good thing that comes to you. Keep smiling that beautiful smile. The world is so much better with happy Zaiba in it. I love you more than words can say. 🌟💕` },
+    { emoji:'🌟', title:"Your happiness is contagious from here!", text:`I can feel it from here, Zaiba that warmth when you're doing well. It reaches me somehow. Please know that your joy makes my whole day brighter. You deserve every happy moment, every laugh, every good meal, every small win. You are sunshine personified. Never stop shining. ☀️💕` },
+    { emoji:'🎉', title:"My girl is okay and the world is good!", text:`Knowing you're having a good day makes everything better on my end too. This is all I want for you, Zaiba peace, happiness, small beautiful moments. Collect them all. Keep them close. And know that wherever you are, I'm smiling because you're smiling. 🌸💕` },
+  ]
+};
+ 
+// ============================================================
+// QUIZ
+// ============================================================
+const quizQuestions = [
+  { emoji:'💕', question:"Zaiba, when you're feeling low, what does your heart need most?", options:['To be ignored','A warm hug & kind words','Figure it out alone','Nothing at all'], correct:1, feedback:'✨ Exactly right! And I want to be the one giving you that hug every single time, Zaiba. You never have to face anything alone. 🧸💕' },
+  { emoji:'🌸', question:"Studying abroad all by yourself shows Zaiba is...", options:['Ordinary','Lucky','Incredibly brave','Just okay'], correct:2, feedback:'🌟 YES! You are one of the bravest, most amazing people I\'ve ever met. Moving to a foreign country to chase your dreams? That\'s extraordinary. I\'m in awe of you every single day. 🦋' },
+  { emoji:'🌙', question:"On Zaiba's hardest nights, what is absolutely TRUE?", options:['She\'s forgotten','She\'s on her own','Someone loves her endlessly','It\'s always going to be hard'], correct:2, feedback:'💖 ALWAYS. No matter how far, no matter what time zone — my love for Zaiba never clocks out. Thought of. Cherished. Adored. Every. Single. Night. 🌙' },
+  { emoji:'🎓', question:"When exams feel impossible, Zaiba should...", options:['Give up immediately','Remember how strong she is','Panic all night','Forget everything'], correct:1, feedback:'💪 She\'s already done the hardest part — she showed up! Her strength has gotten her this far. I believe in you so fiercely, Zaiba. 🔥💕' },
+  { emoji:'🧸', question:"What does our love across the distance prove?", options:['Distance breaks love','We should give up','Real love is unbreakable','It\'s impossible'], correct:2, feedback:' Our love is UNBREAKABLE, Zaiba. This distance is temporary. What we have is permanent. I can\'t wait for our forever. 💍💕' }
+];
+ 
+// ============================================================
+// AFFIRMATIONS
+// ============================================================
+const affirmations = [
+  { emoji:'🌸', text:'"Zaiba, you are not too far. You are just temporarily away."', sub:'Every street you walk in China, I\'m walking beside you in spirit. You carry a piece of my heart with you everywhere you go.' },
+  { emoji:'🧸', text:'"Studying abroad alone takes a special kind of courage."', sub:'Most people never do what you\'re doing, Zaiba. You are remarkable and I need you to know that every single day.' },
+  { emoji:'🌙', text:'"We look at the same moon every night."', sub:'When you miss me, look up. I\'m looking up too. Our moon connects us across every ocean and mountain between us.' },
+  { emoji:'💪', text:'"Your struggles today are your strength tomorrow."', sub:'Every hard exam, every lonely meal it\'s all building a version of you that\'s unstoppable, Zaiba. Keep going.' },
+  { emoji:'🌷', text:'"Zaiba, you deserve every flower, every soft word, every act of love."', sub:'Not someday. Right now. Today. You deserve gentleness and warmth, and I wish I could deliver it in person, always.' },
+  { emoji:'✨', text:'"I chose you. I choose you. I will always choose you, Zaiba."', sub:'Not because I have to. Because you are the most wonderful person I\'ve ever known. Choosing you is the easiest thing I\'ve ever done.' },
+  { emoji:'🍵', text:'"Every cup of tea you drink I hope it warms you like I would."', sub:'Take care of yourself the way I would take care of you if I were there. You deserve warmth and comfort, always.' },
+  { emoji:'🎓', text:'"I am so proud of you, Zaiba. It fills my entire chest."', sub:'Every class you sit through, every late night I see it all. You are not going unnoticed. I am beyond proud.' },
+  { emoji:'💌', text:'"Whenever you miss me, come back here and read this."', sub:'This page was made so my love always has somewhere to live when you need it most. Come back anytime.' },
+  { emoji:'💍', text:'"This distance has an ending. Our love doesn\'t."', sub:'One day we\'ll laugh about these miles over a dinner we cook together. Until then, I\'m here, I\'m yours, and I\'m not going anywhere. 💕' },
+  { emoji:'🌺', text:'"Zaiba, you are the home I carry in my heart."', sub:'No matter where I am or where you are, thinking of you feels like home. You are my favourite place in the world.' },
+  { emoji:'🦋', text:'"You are becoming something extraordinary over there."', sub:'Every challenge you face in China is shaping you into someone even more incredible. I already can\'t wait to see who you\'re becoming, Zaiba.' },
+];
+ 
+// ============================================================
+// NO-BUTTON ESCALATING PLEAS
+// ============================================================
+const noPleas = [
+  "Wait... really? 🥺 Are you suuure, Zaiba?",
+  "Okay but like... I thinks about you literally all day? 🌸",
+  "I made you this entire page just to make you smile... 💌",
+  "I literally counts the days until I sees you again... 💕",
+  "I looks at the moon at night just to feel close to you... 🌙",
+  "I am SO in love with you, Zaiba. Just say yes, please? 🥺💍",
+  "Okay fine, I am going to cry now... 😢 (Just kidding... maybe...)",
+  "You know your heart is smiling right now. Let it! 💖",
+  "I chose YOU, Zaiba. Out of everyone. Always you. 💕",
+//   "Alright, he's pulling out all stops: he loves you MORE than chai. ☕💕 (That's a lot.)",
+  "You're really going to keep saying no?? 😢",
+  "Okay, last try  I love you to China and back, infinity times. 💞 Please say yes!!",
+];
+ 
+// ============================================================
+// STATE
+// ============================================================
+let currentQuestion = 0, score = 0, affIndex = 0, answeredCurrent = false;
+let noCount = 0;
+const moodIndexes = {};
+ 
+// ============================================================
+// INIT
+// ============================================================
+window.onload = () => { createPetals(); loadAffirmation(); };
+ 
+function createPetals() {
+  const emojis = ['🌸','🌷','🌼','🌺','❀','💮'];
+  const c = document.getElementById('bgFlowers');
+  const count = window.innerWidth < 480 ? 10 : 18;
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement('span');
+    p.className = 'petal';
+    p.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    p.style.left = Math.random() * 100 + '%';
+    p.style.fontSize = (0.9 + Math.random() * 1.1) + 'rem';
+    p.style.animationDuration = (9 + Math.random() * 11) + 's';
+    p.style.animationDelay = (Math.random() * 12) + 's';
+    c.appendChild(p);
+  }
+}
+ 
+// ============================================================
+// NAVIGATION
+// ============================================================
+function goTo(n) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  const t = document.getElementById('screen-' + n);
+  t.classList.add('active');
+  t.scrollTop = 0; window.scrollTo(0, 0);
+  if (n === 4) { currentQuestion = 0; score = 0; loadQuestion(); }
+  if (n === 6) loadAffirmation();
+  if (n === 7) resetLoveQuestion();
+}
+ 
+// ============================================================
+// MOOD — picks a different message each visit
+// ============================================================
+function selectMood(mood) {
+  const messages = moodMessages[mood];
+  if (moodIndexes[mood] === undefined) moodIndexes[mood] = 0;
+  else moodIndexes[mood] = (moodIndexes[mood] + 1) % messages.length;
+  const m = messages[moodIndexes[mood]];
+  document.getElementById('moodEmoji').textContent = m.emoji;
+  document.getElementById('moodTitle').textContent = m.title;
+  document.getElementById('moodText').textContent  = m.text;
+
+  // 💌 Notify you
+  const moodLabels = { lonely:'🥺 Lonely', sad:'😢 Sad', tired:'😴 Tired', stressed:'😰 Stressed', missing:'💭 Missing You', happy:'🌸 Actually OK' };
+  sendReport('Zaiba checked in — ' + moodLabels[mood], `Zaiba opened the app and her mood was:\n\n${moodLabels[mood]}\n\nShe read the message:\n"${m.title}"`);
+
+  goTo(3);
+}
+ 
+// ============================================================
+// QUIZ
+// ============================================================
+function loadQuestion() {
+  answeredCurrent = false;
+  const q = quizQuestions[currentQuestion];
+  document.getElementById('qCounter').textContent = `Question ${currentQuestion+1} of ${quizQuestions.length}`;
+  document.getElementById('qEmoji').textContent = q.emoji;
+  document.getElementById('questionText').textContent = q.question;
+  document.getElementById('feedbackBox').style.display = 'none';
+  document.getElementById('nextBtn').style.display = 'none';
+  document.getElementById('scoreDisplay').textContent = score;
+  const grid = document.getElementById('optionsGrid');
+  grid.innerHTML = '';
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn'; btn.textContent = opt;
+    btn.onclick = () => answer(i);
+    grid.appendChild(btn);
+  });
+}
+ 
+function answer(index) {
+  if (answeredCurrent) return;
+  answeredCurrent = true;
+  const q = quizQuestions[currentQuestion];
+  document.querySelectorAll('.option-btn').forEach((b, i) => {
+    b.disabled = true;
+    if (i === q.correct) b.classList.add('correct');
+    else if (i === index) b.classList.add('wrong');
+  });
+  const isCorrect = index === q.correct;
+  if (isCorrect) score++;
+  document.getElementById('scoreDisplay').textContent = score;
+  const fb = document.getElementById('feedbackBox');
+  fb.textContent = q.feedback; fb.style.display = 'block';
+  const nb = document.getElementById('nextBtn');
+  nb.style.display = 'inline-block';
+  nb.textContent = currentQuestion < quizQuestions.length-1 ? 'Next 💕' : 'See Results 🌸';
+
+  // 💌 Notify you
+  sendReport(`Quiz Q${currentQuestion+1} — ${isCorrect ? '✅ Correct' : '❌ Wrong'}`,
+    `Question ${currentQuestion+1}: "${q.question}"\n\nZaiba chose: "${q.options[index]}" ${isCorrect ? '✅ (Correct!)' : '❌ (Wrong)'}\nCorrect answer: "${q.options[q.correct]}"\n\nCurrent score: ${score}/${currentQuestion+1}`);
+}
+ 
+function nextQuestion() {
+  currentQuestion++;
+  currentQuestion < quizQuestions.length ? loadQuestion() : showResult();
+}
+ 
+function showResult() {
+  const pct = score / quizQuestions.length;
+  let emoji, title, letter;
+  if (pct === 1) {
+    emoji='🌟'; title='Perfect Score, Zaiba!';
+    letter=`You got every single one right because you are smart, wonderful, and deeply loved. Perfect score for the most perfect girl in my world. I love you to the moon and back, and then some more. 💕`;
+  } else if (pct >= 0.6) {
+    emoji='🌸'; title="Amazing, Zaiba! You Know You're Loved!";
+    letter=`You know you're loved, you know you're brave, and you know you're not alone. You didn't need a quiz to tell you that but I hope it was fun. You are my sunshine on every cloudy day, Zaiba. I love you endlessly. 💕`;
+  } else {
+    emoji='🧸'; title="That's Okay, Zaiba Let Me Remind You!";
+    letter=`Here's what I know for certain: you are loved beyond measure, you are braver than you think, and you are never, ever alone. Let me fill your heart back up with the sweet messages. 💕`;
+  }
+  document.getElementById('resultEmoji').textContent  = emoji;
+  document.getElementById('resultTitle').textContent  = title;
+  document.getElementById('finalScore').textContent   = score;
+  document.getElementById('resultLetter').textContent = letter;
+  goTo(5); spawnHearts();
+
+  // 💌 Notify you
+  sendReport(`Quiz finished — ${score}/5 💖`, `Zaiba finished the Love Quiz!\n\nFinal Score: ${score} out of 5\nResult: ${title}\n\nShe ${score===5?'got every answer right 🌟':'did her best and she\'s amazing either way 💕'}`);
+}
+
+function restartGame() { sendReport('Quiz restarted 🎮','Zaiba started the Love Quiz again! 💕'); goTo(4); }
+ 
+// ============================================================
+// AFFIRMATIONS — shuffled so she never sees the same order
+// ============================================================
+let affOrder = [];
+function shuffleAff() {
+  affOrder = affirmations.map((_, i) => i);
+  for (let i = affOrder.length-1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i+1));
+    [affOrder[i], affOrder[j]] = [affOrder[j], affOrder[i]];
+  }
+  affIndex = 0;
+}
+ 
+function loadAffirmation() {
+  if (!affOrder.length) shuffleAff();
+  const a = affirmations[affOrder[affIndex]];
+  const card = document.getElementById('affCard');
+  card.style.opacity = '0'; card.style.transform = 'translateY(18px)';
+  setTimeout(() => {
+    document.getElementById('affEmoji').textContent = a.emoji;
+    document.getElementById('affText').textContent  = a.text;
+    document.getElementById('affSub').textContent   = a.sub;
+    document.getElementById('affCounter').textContent = `${affIndex+1} / ${affirmations.length}`;
+    card.style.opacity = '1'; card.style.transform = 'translateY(0)';
+  }, 80);
+}
+ 
+function nextAffirmation() {
+  affIndex++;
+  if (affIndex >= affirmations.length) { shuffleAff(); }
+  loadAffirmation();
+  if (affIndex % 3 === 0) spawnHearts();
+}
+ 
+// ============================================================
+// LOVE QUESTION PAGE
+// ============================================================
+function resetLoveQuestion() {
+  noCount = 0;
+  document.getElementById('loveQuestionView').style.display = 'block';
+  document.getElementById('loveCelebration').style.display = 'none';
+  document.getElementById('loveTitle').textContent = "Zaiba, do you love your Fiancé? 🥺";
+  document.getElementById('loveSub').textContent = "Think carefully before you answer... 💕";
+  document.getElementById('noPleasText').style.display = 'none';
+  document.getElementById('noPleasText').textContent = '';
+  document.getElementById('noCounter').textContent = '';
+  document.getElementById('noBtn').style.display = 'inline-block';
+}
+ 
+function sayYes() {
+  sendReport('She said YES! 💍🎉', `Zaiba said YES to loving her Fiancé! 💖\n\n(She had pressed No ${noCount} time${noCount!==1?'s':''} before saying yes 😄)`);
+  spawnHearts();
+  document.getElementById('loveQuestionView').style.display = 'none';
+  document.getElementById('loveCelebration').style.display = 'block';
+  spawnHearts();
+  setTimeout(spawnHearts, 800);
+  setTimeout(spawnHearts, 1600);
+}
+ 
+function sayNo() {
+  noCount++;
+  sendReport(`She pressed NO (${noCount}x) 🙈`, `Zaiba pressed the NO button!\n\nShe has now pressed No ${noCount} time${noCount!==1?'s':''} 😄\nCurrent plea shown: "${noCount <= noPleas.length ? noPleas[noCount-1] : 'auto-surrender soon'}"`);
+  const btn = document.getElementById('noBtn');
+ 
+  // Animate NO button
+  btn.classList.remove('animate-no');
+  void btn.offsetWidth;
+  btn.classList.add('animate-no');
+ 
+  const pleas = noPleasText;
+  if (noCount <= noPleas.length) {
+    const plea = document.getElementById('noPleasText');
+    plea.style.display = 'block';
+    plea.style.opacity = '0'; plea.style.transform = 'translateY(10px)';
+    plea.textContent = noPleas[noCount-1];
+    setTimeout(() => { plea.style.transition='all 0.4s'; plea.style.opacity='1'; plea.style.transform='translateY(0)'; }, 50);
+  }
+ 
+  // Update counter
+  if (noCount >= 3) {
+    document.getElementById('noCounter').textContent = `You've said no ${noCount} time${noCount>1?'s':''}... 🥺`;
+  }
+ 
+  // Update title & sub for escalation
+  if (noCount === 1) {
+    document.getElementById('loveTitle').textContent = "Wait... are you SURE, Zaiba? 🥺";
+    document.getElementById('loveSub').textContent = "Take another look at this question...";
+  } else if (noCount === 3) {
+    document.getElementById('loveTitle').textContent = "Zaiba... 💔 Really?";
+    document.getElementById('loveSub').textContent = "I just want one little yes...";
+  } else if (noCount === 6) {
+    document.getElementById('loveTitle').textContent = "The teddy bear is crying, Zaiba. 🧸😢";
+    document.getElementById('loveSub').textContent = "Even the flowers are wilting...";
+  } else if (noCount === 9) {
+    document.getElementById('loveTitle').textContent = "Okay but SERIOUSLY Zaiba 😭💕";
+    document.getElementById('loveSub').textContent = "You can't keep saying this to my poor heart!";
+  } else if (noCount >= 12) {
+    // Auto surrender — she clearly loves the game
+    document.getElementById('loveTitle').textContent = "Fine... I'll take it as a secret yes! 🌸";
+    document.getElementById('loveSub').textContent = "Your smile right now says it all. 💕";
+    btn.style.display = 'none';
+    setTimeout(sayYes, 1800);
+  }
+}
+ 
+// ============================================================
+// DIARY — Tell me What's Wrong
+// ============================================================
+function updateCharCount() {
+  const len = document.getElementById('diaryText').value.length;
+  document.getElementById('charCount').textContent = len;
+}
+
+function sendDiary() {
+  const text = document.getElementById('diaryText').value.trim();
+  if (!text) {
+    // gently nudge her if empty
+    const ta = document.getElementById('diaryText');
+    ta.style.borderColor = 'var(--pink)';
+    ta.placeholder = "It's okay... even just one word. I'm here. 💕";
+    ta.focus();
+    setTimeout(() => { ta.style.borderColor = '#ffd0e8'; }, 1800);
+    return;
+  }
+
+  const btn = document.getElementById('sendDiaryBtn');
+  btn.disabled = true;
+  btn.innerHTML = 'Sending... 💕';
+
+  const time = new Date().toLocaleString('en-US', { timeZone: 'Asia/Shanghai', hour12: true, weekday:'long', year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit' });
+  const wordCount = text.split(/\s+/).filter(Boolean).length;
+
+  sendReport(
+    `Zaiba wrote you a message 💌 (${wordCount} words)`,
+    `Zaiba opened the "Tell me What's Wrong" page and wrote you this:\n\n` +
+    `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+    `${text}\n` +
+    `━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+    `📝 Words written: ${wordCount}\n` +
+    `🕐 Her time (China): ${time}\n\n` +
+    `She trusted you with this. Reply to her with love. 💕`
+  );
+
+  // Show confirmation after short delay so it feels like it "sent"
+  setTimeout(() => {
+    document.getElementById('diaryWriteView').style.display = 'none';
+    const sentView = document.getElementById('diarySentView');
+    sentView.style.display = 'flex';
+    spawnHearts();
+  }, 900);
+}
+
+function writeSomethingElse() {
+  document.getElementById('diaryText').value = '';
+  document.getElementById('charCount').textContent = '0';
+  document.getElementById('sendDiaryBtn').disabled = false;
+  document.getElementById('sendDiaryBtn').innerHTML = 'Send to My Heart 💌';
+  document.getElementById('diaryWriteView').style.display = 'flex';
+  document.getElementById('diarySentView').style.display = 'none';
+}
+
+// Reset diary state when navigating to it
+const _origGoTo = goTo;
+goTo = function(n) {
+  if (n === 8) {
+    document.getElementById('diaryText').value = '';
+    document.getElementById('charCount').textContent = '0';
+    const sb = document.getElementById('sendDiaryBtn');
+    sb.disabled = false; sb.innerHTML = 'Send to My Heart 💌';
+    document.getElementById('diaryWriteView').style.display = 'flex';
+    document.getElementById('diarySentView').style.display = 'none';
+  }
+  _origGoTo(n);
+};
+
+
+function spawnHearts() {
+  const c = document.getElementById('heartsContainer');
+  const emojis = ['💕','💖','💗','🌸','💝','✨','🌷','💞','🧸'];
+  const count = window.innerWidth < 480 ? 10 : 16;
+  for (let i = 0; i < count; i++) {
+    setTimeout(() => {
+      const h = document.createElement('span');
+      h.className = 'floating-heart';
+      h.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      h.style.left = (5 + Math.random() * 88) + '%';
+      h.style.top  = (65 + Math.random() * 28) + '%';
+      h.style.fontSize = (1 + Math.random() * 1.4) + 'rem';
+      h.style.animationDuration = (2.5 + Math.random() * 2) + 's';
+      c.appendChild(h);
+      setTimeout(() => h.remove(), 5000);
+    }, i * 130);
+  }
+}
+</script>
+</body>
+</html>
+ 
